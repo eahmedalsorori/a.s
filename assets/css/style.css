@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+/* إعدادات النصوص المخصصة */
+.custom-text {
+    @apply text-gray-900 dark:text-white;
+}
+
+.custom-text-muted {
+    @apply text-gray-600 dark:text-gray-400;
+}
+
+/* تنسيق تأثيرات البطاقات */
+.custom-card {
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* تخصيص زر الفلترة عند التفاعل */
+.filter-btn {
+    outline: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* سلاسة إخفاء وإظهار الكروت */
+.project-card {
+    will-change: transform, opacity;
+}
+
+.project-card.hidden {
+    display: none !important;
+}
+/* ================================================================== */
+/* Start Style To Page Packages.html */
+/* ================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Cairo', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==================== تعريف الثيمات ==================== */
+
+/* 1. الثيم الفاتح التقليدي */
+.theme-light {
+    --bg-main: #f9fafb;
+    --card-bg: #ffffff;
+    --card-border: #e5e7eb;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --accent: #f59e0b;
+    --accent-hover: #d97706;
+    --badge-bg: #feefc3;
+    --badge-text: #b45309;
+}
+
+/* 2. الثيم الفاتح العصري */
+.theme-light-modern {
+    --bg-main: #f0f4f8;
+    --card-bg: #ffffff;
+    --card-border: #cbd5e1;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --badge-bg: #dbeafe;
+    --badge-text: #1e40af;
+}
+
+/* 3. الثيم الداكن */
+.theme-dark {
+    --bg-main: #0f172a;
+    --card-bg: #1e293b;
+    --card-border: #334155;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent: #f59e0b;
+    --accent-hover: #fbbf24;
+    --badge-bg: #332e1e;
+    --badge-text: #fef08a;
+}
+
+/* 4. الثيم الداكن العصري */
+.theme-dark-modern {
+    --bg-main: #090d16;
+    --card-bg: #131c2e;
+    --card-border: #1e2d4a;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --accent: #8b5cf6;
+    --accent-hover: #a78bfa;
+    --badge-bg: #2e1065;
+    --badge-text: #ddd6fe;
+}
+
+/* 5. الثيم الذهبي الفاخر */
+.theme-gold-luxury {
+    --bg-main: #0c0a09;
+    --card-bg: #1c1917;
+    --card-border: #44403c;
+    --text-primary: #fafaf9;
+    --text-secondary: #a8a29e;
+    --accent: #d97706;
+    --accent-hover: #f59e0b;
+    --badge-bg: #451a03;
+    --badge-text: #fde68a;
+}
+
+/* ==================== الكلاسات الديناميكية ==================== */
+.custom-theme-bg { background-color: var(--bg-main) !important; }
+.custom-card { background-color: var(--card-bg) !important; border-color: var(--card-border) !important; }
+.custom-text { color: var(--text-primary) !important; }
+.custom-text-muted { color: var(--text-secondary) !important; }
+.custom-border { border-color: var(--card-border) !important; }
+
+.theme-badge {
+    background-color: var(--badge-bg) !important;
+    color: var(--badge-text) !important;
+}
+
+.theme-title { color: var(--text-primary) !important; }
+.theme-muted { color: var(--text-secondary) !important; }
+.theme-accent-text { color: var(--accent) !important; }
+
+.custom-btn-accent {
+    background-color: var(--accent) !important;
+    color: #ffffff !important;
+}
+.custom-btn-accent:hover {
+    background-color: var(--accent-hover) !important;
+}
+
+.custom-table-header {
+    background-color: var(--badge-bg) !important;
+    color: var(--text-primary) !important;
+}
+/* ================================================================== */
+/* Start Style To Page Packages.html */
+/* ================================================================== */

@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="html-root">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon & Manifest -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicon_io/site.webmanifest">
+
+    <title data-lang-ar="معرض أعمالي - م. أحمد السروري" data-lang-en="Portfolio - Eng. Ahmed Al-Sorori">معرض أعمالي - م.
+        أحمد السروري</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/brands.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- External Scripts -->
+    <script src="assets/js/header.js" defer></script>
+    <script src="assets/js/footer.js" defer></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 font-sans transition-colors duration-300">
+
+    <!-- Header Container -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 text-center px-4 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto">
+            <span
+                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 mb-6 border border-blue-100 dark:border-blue-800 shadow-sm">
+                <i class="fa-solid fa-code"></i>
+                <span data-lang-ar="معرض الأعمال البرمجية والتسويقية" data-lang-en="Software & Marketing Portfolio">معرض
+                    الأعمال البرمجية والتسويقية</span>
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 text-gray-900 dark:text-white tracking-tight leading-tight"
+                data-lang-ar="استعراض لأبرز مشاريعي الرقمية والحلول البرمجية"
+                data-lang-en="Showcasing My Featured Digital Projects & Software Solutions">
+                استعراض لأبرز مشاريعي الرقمية والحلول البرمجية
+            </h1>
+            <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
+                data-lang-ar="مجموعة مختارة من المنصات المتكاملة، ومواقع الويب، وتطبيقات التجارة الإلكترونية وأنظمة الـ ERP التي تم تنفيذها بأحدث التقنيات."
+                data-lang-en="A curated collection of integrated platforms, websites, e-commerce applications, and ERP systems built with cutting-edge technologies.">
+                مجموعة مختارة من المنصات المتكاملة، ومواقع الويب، وتطبيقات التجارة الإلكترونية وأنظمة الـ ERP التي تم
+                تنفيذها بأحدث التقنيات.
+            </p>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter Buttons -->
+    <div class="max-w-7xl mx-auto px-4 mb-12">
+        <div class="flex flex-wrap items-center justify-center gap-3" id="filter-buttons">
+            <button onclick="filterProjects('all')"
+                class="filter-btn px-5 py-2.5 rounded-xl font-semibold text-sm bg-blue-600 text-white shadow-md transition-all"
+                data-lang-ar="الكل" data-lang-en="All">الكل</button>
+            <button onclick="filterProjects('ecommerce')"
+                class="filter-btn px-5 py-2.5 rounded-xl font-semibold text-sm bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700 transition-all"
+                data-lang-ar="متاجر وتجارة إلكترونية" data-lang-en="E-Commerce">متاجر وتجارة إلكترونية</button>
+            <button onclick="filterProjects('web')"
+                class="filter-btn px-5 py-2.5 rounded-xl font-semibold text-sm bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700 transition-all"
+                data-lang-ar="أنظمة ومنصات ويب" data-lang-en="Web Platforms">أنظمة ومنصات ويب</button>
+            <button onclick="filterProjects('branding')"
+                class="filter-btn px-5 py-2.5 rounded-xl font-semibold text-sm bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700 transition-all"
+                data-lang-ar="هوية بصرية وتسويق" data-lang-en="Branding & Marketing">هوية بصرية وتسويق</button>
+        </div>
+    </div>
+
+    <!-- Projects Grid Container -->
+    <main class="max-w-7xl mx-auto px-4 pb-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+
+            <!-- Project 1: منصة التجارة الإلكترونية متعددة البائعين -->
+            <div class="project-card bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group"
+                data-category="ecommerce">
+                <div>
+                    <div class="relative overflow-hidden h-52 bg-gray-100 dark:bg-gray-700">
+                        <div class="absolute inset-0 bg-blue-600/10 group-hover:bg-transparent transition-colors z-10">
+                        </div>
+                        <img src="assets/img/profile/Marctplase.png" alt="Multi-Vendor Marketplace"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="absolute top-4 right-4 z-20 px-3 py-1 rounded-full text-xs font-bold bg-blue-600 text-white shadow"
+                            data-lang-ar="تحت الإنشاء" data-lang-en="Under Construction">تحت الإنشاء</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white"
+                            data-lang-ar="منصة تجارة إلكترونية متعددة البائعين"
+                            data-lang-en="Multi-Vendor E-Commerce Marketplace">
+                            منصة تجارة إلكترونية متعددة البائعين
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed text-sm"
+                            data-lang-ar="سوق إلكتروني متكامل مبني باستخدام Laravel 13 و Livewire و Tailwind CSS، يدعم إدارة المتاجر، البائعين، لوحة تحكم الإدارة، والمنتجات."
+                            data-lang-en="A comprehensive e-commerce marketplace built with Laravel 13, Livewire, and Tailwind CSS, supporting shop management, vendors, and admin controls.">
+                            سوق إلكتروني متكامل مبني باستخدام Laravel 13 و Livewire و Tailwind CSS، يدعم إدارة المتاجر،
+                            البائعين، لوحة تحكم الإدارة، والمنتجات.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">Laravel
+                                13</span>
+                            <span
+                                class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">Livewire</span>
+                            <span
+                                class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">MySQL</span>
+                            <span
+                                class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">Git
+                                & GitHub</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 space-y-3">
+                    <button
+                        onclick="openProjectModal('Multi-Vendor Marketplace', 'منصة تجارة إلكترونية متعددة البائعين', 'تم تطوير هذه المنصة خصيصاً لتوفير تجربة تسوق متكاملة تشمل إدارة المنتجات، عربة التسوق التفاعلية، بوابات الدفع، وإدارة أدوار المستخدمين (مسؤولين، تجار، عملاء) بكفاءة عالية وأداء فائق.')"
+                        class="w-full py-3 px-4 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-semibold rounded-2xl hover:bg-blue-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2">
+                        <span data-lang-ar="تفاصيل المشروع" data-lang-en="Project Details">تفاصيل المشروع</span>
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </button>
+                    <a href="https://github.com/eahmedalsorori/Marketplace1" target="_blank"
+                        class="w-full py-3 px-4 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold rounded-2xl hover:bg-purple-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2">
+                        <span data-lang-ar="مستودع الكود (GitHub)" data-lang-en="GitHub Repository">مستودع الكود</span>
+                        <i class="fa-brands fa-github text-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2: موقع عيادات السروري الطبية -->
+            <div class="project-card bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group"
+                data-category="web">
+                <div>
+                    <div class="relative overflow-hidden h-52 bg-gray-100 dark:bg-gray-700">
+                        <div class="absolute inset-0 bg-teal-600/10 group-hover:bg-transparent transition-colors z-10">
+                        </div>
+                        <img src="assets/img/profile/0al-sorori.png" alt="Al-Sorori Medical Clinics"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="absolute top-4 right-4 z-20 px-3 py-1 rounded-full text-xs font-bold bg-teal-600 text-white shadow">
+                            Tailwind & UI/UX
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white"
+                            data-lang-ar="موقع وهوية عيادات السروري الطبية"
+                            data-lang-en="Al-Sorori Medical Clinics Website & Brand">
+                            موقع وهوية عيادات السروري الطبية
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed text-sm"
+                            data-lang-ar="تصميم وتطوير موقع إلكتروني متجاوب، مع شعار ثلاثي الأبعاد وهوية بصرية متكاملة بإشراف الدكتور وجدي عز الدين السروري."
+                            data-lang-en="Designing and developing a responsive website, along with a 3D logo and complete visual identity under the leadership of Dr. Wagdy Al-Sorori.">
+                            تصميم وتطوير موقع إلكتروني متجاوب، مع شعار ثلاثي الأبعاد وهوية بصرية متكاملة بإشراف الدكتور
+                            وجدي عز الدين السروري.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">HTML5
+                                / Tailwind</span>
+                            <span
+                                class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">UI/UX
+                                Design</span>
+                            <span
+                                class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">Branding</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 space-y-3">
+                    <button
+                        onclick="openProjectModal('Al-Sorori Clinics', 'موقع وهوية عيادات السروري الطبية', 'مشروع تعريفي متكامل لعيادات السروري، يضم واجهات عصرية متجاوبة مع الأجهزة الذكية، نظام حجز مواعيد مبدئي، وتصاميم بانرات دعائية وهويات بصرية فاخرة.')"
+                        class="w-full py-3 px-4 bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 font-semibold rounded-2xl hover:bg-teal-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2">
+                        <span data-lang-ar="تفاصيل المشروع" data-lang-en="Project Details">تفاصيل المشروع</span>
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </button>
+                    <a href="https://al-sorori.vercel.app/" target="_blank"
+                        class="w-full py-3 px-4 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold rounded-2xl hover:bg-teal-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2">
+                        <span data-lang-ar="عرض المشروع حي" data-lang-en="Live Preview">عرض المشروع حي</span>
+                        <i class="fa-solid fa-eye text-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 3: نظام إدارة الشحن الدولي واللوجستيات -->
+            <div class="project-card bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group"
+                data-category="web">
+                <div>
+                    <div class="relative overflow-hidden h-52 bg-gray-100 dark:bg-gray-700">
+                        <div class="absolute inset-0 bg-amber-600/10 group-hover:bg-transparent transition-colors z-10">
+                        </div>
+                        <img src="assets/img/profile/shipping.png" alt="International Logistics Platform"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="absolute top-4 right-4 z-20 px-3 py-1 rounded-full text-xs font-bold bg-amber-600 text-white shadow">
+                            Vercel Deployed
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white"
+                            data-lang-ar="منصة إدارة الشحن الدولي واللوجستيات"
+                            data-lang-en="International Logistics & Freight Platform">
+                            منصة إدارة الشحن الدولي واللوجستيات
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed text-sm"
+                            data-lang-ar="واجهة ويب متقدمة لإدارة شحنات البضائع، تتبع مسار الشحنات، وحساب التكاليف اللوجستية، ومنشورة على سحابة Vercel."
+                            data-lang-en="An advanced web interface for managing cargo shipments, tracking route statuses, and calculating logistics costs, hosted on Vercel.">
+                            واجهة ويب متقدمة لإدارة شحنات البضائع، تتبع مسار الشحنات، وحساب التكاليف اللوجستية، ومنشورة
+                            على سحابة Vercel.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">JavaScript</span>
+                            <span
+                                class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">Tailwind
+                                CSS</span>
+                            <span
+                                class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">Vercel</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 space-y-3">
+                    <button
+                        onclick="openProjectModal('Logistics Platform', 'منصة إدارة الشحن الدولي واللوجستيات', 'منصة تفاعلية مصممة لتسهيل عمليات الشحنات الدولية، تتيح للعملاء تتبع حالة الطرود والوثائق بدقة لحظية مع نظام حاسبة تكاليف متقدم.')"
+                        class="w-full py-3 px-4 bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-500 font-semibold rounded-2xl hover:bg-amber-500 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2">
+                        <span data-lang-ar="تفاصيل المشروع" data-lang-en="Project Details">تفاصيل المشروع</span>
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </button>
+                    <a href="https://shipping-world.vercel.app/" target="_blank"
+                        class="w-full py-3 px-4 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold rounded-2xl hover:bg-amber-500 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2">
+                        <span data-lang-ar="عرض المشروع حي" data-lang-en="Live Preview">عرض المشروع حي</span>
+                        <i class="fa-solid fa-eye text-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 4: تطبيق التبرع بالدم الرقمي في اليمن -->
+            <div class="project-card bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group"
+                data-category="web">
+                <div>
+                    <div class="relative overflow-hidden h-52 bg-gray-100 dark:bg-gray-700">
+                        <div class="absolute inset-0 bg-red-600/10 group-hover:bg-transparent transition-colors z-10">
+                        </div>
+                        <img src="assets/img/profile/bloods.png" alt="Digital Blood Donation Platform"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="absolute top-4 right-4 z-20 px-3 py-1 rounded-full text-xs font-bold bg-red-600 text-white shadow">
+                            Social Impact
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white"
+                            data-lang-ar="منصة التبرع بالدم الرقمية" data-lang-en="Digital Blood Donation Web App">
+                            منصة التبرع بالدم الرقمية
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed text-sm"
+                            data-lang-ar="تطبيق ويب حي يربط بين المتبرعين بالدم، المحتاجين، والمؤسسات الصحية في اليمن لتسريع عمليات إنقاذ الحياة."
+                            data-lang-en="A real-time web application connecting blood donors, recipients, and health institutions in Yemen to speed up life-saving processes.">
+                            تطبيق ويب حي يربط بين المتبرعين بالدم، المحتاجين، والمؤسسات الصحية في اليمن لتسريع عمليات
+                            إنقاذ الحياة.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">PHP</span>
+                            <span
+                                class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">Bootstrap
+                                5</span>
+                            <span
+                                class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 space-y-3">
+                    <button
+                        onclick="openProjectModal('Blood Donation App', 'منصة التبرع بالدم الرقمية', 'مبادرة تقنية إنسانية تهدف لتسهيل الوصول إلى متطوعي التبرع بالدم حسب فصيلة الدم والمنطقة الجغرافية داخل اليمن، مع لوحة تحكم لإدارة الطلبات والنداءات العاجلة.')"
+                        class="w-full py-3 px-4 bg-red-50 dark:bg-red-900/30 text-red-600 dark:text-red-400 font-semibold rounded-2xl hover:bg-red-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2">
+                        <span data-lang-ar="تفاصيل المشروع" data-lang-en="Project Details">تفاصيل المشروع</span>
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </button>
+                    <a href="https://github.com/eahmedalsorori/Yemen-Digital-Blood-Bank-Platform" target="_blank"
+                        class="w-full py-3 px-4 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold rounded-2xl hover:bg-red-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2">
+                        <span data-lang-ar="مستودع الكود (GitHub)" data-lang-en="GitHub Repository">مستودع الكود</span>
+                        <i class="fa-brands fa-github text-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 5: صفحة هبوط أنظمة إطفاء الحريق FM200 -->
+            <div class="project-card bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group"
+                data-category="branding">
+                <div>
+                    <div class="relative overflow-hidden h-52 bg-gray-100 dark:bg-gray-700">
+                        <div class="absolute inset-0 bg-rose-600/10 group-hover:bg-transparent transition-colors z-10">
+                        </div>
+                        <img src="assets/img/profile/aladdin9.png" alt="FM200 Fire Suppression Landing Page"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="absolute top-4 right-4 z-20 px-3 py-1 rounded-full text-xs font-bold bg-rose-600 text-white shadow">
+                            Executive Landing Page
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white"
+                            data-lang-ar="هبوط أنظمة إطفاء الحريق FM200"
+                            data-lang-en="FM200 Fire Suppression Landing Page">
+                            هبوط أنظمة إطفاء الحريق FM200
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed text-sm"
+                            data-lang-ar="صفحة هبوط تنفيذية ومحتوى تسويقي احترافي لخدمات تركيب أنظمة مكافحة الحريق بإشراف م. علاء الدين السروري."
+                            data-lang-en="Executive landing page and professional marketing copy for FM200 fire suppression installation services led by Eng. Alaa Aldin Al-Sorori.">
+                            صفحة هبوط تنفيذية ومحتوى تسويقي احترافي لخدمات تركيب أنظمة مكافحة الحريق بإشراف م. علاء
+                            الدين السروري.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">HTML5
+                                / Tailwind</span>
+                            <span
+                                class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">Copywriting</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 space-y-3">
+                    <button
+                        onclick="openProjectModal('FM200 Landing Page', 'هبوط أنظمة إطفاء الحريق FM200', 'تصميم وتنفيذ صفحة تعريفية موجهة لقطاع الأعمال والمقاولات لعرض تفاصيل مشاريع هندسة أنظمة إطفاء الحريق الغازية الذكية مع قوالب اتصال مباشرة للعملاء.')"
+                        class="w-full py-3 px-4 bg-rose-50 dark:bg-rose-900/30 text-rose-600 dark:text-rose-500 font-semibold rounded-2xl hover:bg-rose-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2">
+                        <span data-lang-ar="تفاصيل المشروع" data-lang-en="Project Details">تفاصيل المشروع</span>
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </button>
+                    <a href="https://aladdin9.vercel.app/" target="_blank"
+                        class="w-full py-3 px-4 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold rounded-2xl hover:bg-rose-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2">
+                        <span data-lang-ar="عرض المشروع حي" data-lang-en="Live Preview">عرض المشروع حي</span>
+                        <i class="fa-solid fa-eye text-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 6: وكالة المميز للتسويق الرقمي -->
+            <div class="project-card bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group"
+                data-category="branding">
+                <div>
+                    <div class="relative overflow-hidden h-52 bg-gray-100 dark:bg-gray-700">
+                        <div
+                            class="absolute inset-0 bg-purple-600/10 group-hover:bg-transparent transition-colors z-10">
+                        </div>
+                        <img src="assets/img/profile/0markteing.png" alt="Al-Mokhayaz Digital Marketing Agency"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="absolute top-4 right-4 z-20 px-3 py-1 rounded-full text-xs font-bold bg-purple-600 text-white shadow">
+                            Digital Marketing
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white"
+                            data-lang-ar="وكالة المميز للتسويق الرقمي"
+                            data-lang-en="Al-Mokhayaz Digital Marketing Agency">
+                            وكالة المميز للتسويق الرقمي
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed text-sm"
+                            data-lang-ar="تطوير واجهة ويب تعريفية، باقات أسعار تسويقية، وجداول خدمات متكاملة لتسويق الشركات والعلامات التجارية."
+                            data-lang-en="Developing a responsive web showcase, service packages, and pricing tables for business marketing and brand promotion.">
+                            تطوير واجهة ويب تعريفية، باقات أسعار تسويقية، وجداول خدمات متكاملة لتسويق الشركات والعلامات
+                            التجارية.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">Web
+                                Showcase</span>
+                            <span
+                                class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">Social
+                                Media Strategy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 space-y-3">
+                    <button
+                        onclick="openProjectModal('Al-Mokhayaz Agency', 'وكالة المميز للتسويق الرقمي', 'تصميم هيكل رقمي متكامل للوكالة يشمل عرض الباقات الإعلانية، خدمات إدارة السوشيال ميديا، واستراتيجيات زيادة المبيعات وتحليل الأداء عبر Google Analytics.')"
+                        class="w-full py-3 px-4 bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 font-semibold rounded-2xl hover:bg-purple-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2">
+                        <span data-lang-ar="تفاصيل المشروع" data-lang-en="Project Details">تفاصيل المشروع</span>
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </button>
+                    <a href="https://markteing-three.vercel.app/" target="_blank"
+                        class="w-full py-3 px-4 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold rounded-2xl hover:bg-purple-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2">
+                        <span data-lang-ar="عرض المشروع حي" data-lang-en="Live Preview">عرض المشروع حي</span>
+                        <i class="fa-solid fa-eye text-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 7: متجر إلكتروني ثابت لعرض المنتجات -->
+            <div class="project-card bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group"
+                data-category="ecommerce">
+                <div>
+                    <div class="relative overflow-hidden h-52 bg-gray-100 dark:bg-gray-700">
+                        <div
+                            class="absolute inset-0 bg-indigo-600/10 group-hover:bg-transparent transition-colors z-10">
+                        </div>
+                        <img src="assets/img/profile/store.png" alt="Static E-commerce Store"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="absolute top-4 right-4 z-20 px-3 py-1 rounded-full text-xs font-bold bg-indigo-600 text-white shadow"
+                            data-lang-ar="متجر ثابت" data-lang-en="Static Store">متجر ثابت</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white"
+                            data-lang-ar="متجر إلكتروني ثابت لعرض المنتجات"
+                            data-lang-en="Static E-Commerce Product Showcase">
+                            متجر إلكتروني ثابت لعرض المنتجات
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed text-sm"
+                            data-lang-ar="تطوير واجهات لعرض منتجات في الويب كـمتجر إلكتروني ولكن هذا ثابت بطابع بصري احترافي."
+                            data-lang-en="Developing web interfaces to showcase products online like an e-commerce store, but in a static format with a professional visual style.">
+                            تطوير واجهات لعرض منتجات في الويب كـمتجر إلكتروني ولكن هذا ثابت بطابع بصري احترافي.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">Web
+                                App</span>
+                            <span
+                                class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">UI
+                                Showcase</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 space-y-3">
+                    <button
+                        onclick="openProjectModal('Static Store', 'متجر إلكتروني ثابت لعرض المنتجات', 'واجهة مستخدم متكاملة وثابتة لعرض وتصنيف المنتجات بطريقة تسويقية جذابة للمستخدمين دون الحاجة لقاعدة بيانات خلفية معقدة.')"
+                        class="w-full py-3 px-4 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 font-semibold rounded-2xl hover:bg-indigo-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2">
+                        <span data-lang-ar="تفاصيل المشروع" data-lang-en="Project Details">تفاصيل المشروع</span>
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </button><a href="https://a-store-beige.vercel.app/" target="_blank"
+                        class="w-full py-3 px-4 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold rounded-2xl hover:bg-purple-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2">
+                        <span data-lang-ar="عرض المشروع حي" data-lang-en="Live Preview">عرض المشروع حي</span>
+                        <i class="fa-solid fa-eye text-lg"></i>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Project Details Modal (Popup) -->
+    <div id="projectModal"
+        class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white dark:bg-gray-900 w-full max-w-lg rounded-3xl p-6 md:p-8 shadow-2xl border border-gray-100 dark:border-gray-800 transform scale-95 transition-transform duration-300"
+            id="modalContent">
+            <div class="flex items-center justify-between mb-6">
+                <h3 id="modalTitle" class="text-2xl font-bold text-gray-900 dark:text-white"></h3>
+                <button onclick="closeProjectModal()"
+                    class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 flex items-center justify-center hover:bg-red-100 hover:text-red-500 transition-colors">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <p id="modalDescription" class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg mb-8"></p>
+            <div class="flex justify-end">
+                <button onclick="closeProjectModal()"
+                    class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors shadow-lg shadow-blue-600/30"
+                    data-lang-ar="إغلاق" data-lang-en="Close">
+                    إغلاق
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- JavaScript for Filtering and Modal Interactivity -->
+    <script>
+        // Filtering Projects
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-blue-600', 'text-white', 'shadow-md');
+                btn.classList.add('bg-white', 'dark:bg-gray-800', 'text-gray-600', 'dark:text-gray-300');
+            });
+
+            event.currentTarget.classList.remove('bg-white', 'dark:bg-gray-800', 'text-gray-600', 'dark:text-gray-300');
+            event.currentTarget.classList.add('bg-blue-600', 'text-white', 'shadow-md');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Modal Controls
+        function openProjectModal(titleEn, titleAr, descText) {
+            const modal = document.getElementById('projectModal');
+            const modalContent = document.getElementById('modalContent');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDescription = document.getElementById('modalDescription');
+
+            const currentLang = document.documentElement.getAttribute('dir') === 'rtl' ? 'ar' : 'en';
+            modalTitle.innerText = currentLang === 'ar' ? titleAr : titleEn;
+            modalDescription.innerText = descText;
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeProjectModal() {
+            const modal = document.getElementById('projectModal');
+            const modalContent = document.getElementById('modalContent');
+
+            modal.classList.add('opacity-0');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+    </script>
+    <script src="assets/js/opreting.js"></script>
+</body>
+
+</html>

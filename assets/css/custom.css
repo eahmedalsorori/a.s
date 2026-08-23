@@ -1,0 +1,49 @@
+/* Start styles Section Hero */
+body { font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif; transition: all 0.3s ease; }
+        /* تعريف مخصص للثيمات باستخدام CSS Variables لتسهيل التبديل */
+        .theme-light { --bg: #fcfbfa; --card-bg: #ffffff; --text-main: #111111; --text-muted: #666666; --accent: #c4a46c; --accent-hover: #b09159; --shadow: rgba(0,0,0,0.04); }
+        .theme-light-modern { --bg: #f4f7f6; --card-bg: #ffffff; --text-main: #0f172a; --text-muted: #475569; --accent: #0ea5e9; --accent-hover: #0284c7; --shadow: rgba(14,165,233,0.05); }
+        .theme-dark { --bg: #121212; --card-bg: #1e1e1e; --text-main: #ffffff; --text-muted: #aaaaaa; --accent: #c4a46c; --accent-hover: #b09159; --shadow: rgba(0,0,0,0.3); }
+        .theme-dark-modern { --bg: #0b0f19; --card-bg: #151f32; --text-main: #f8fafc; --text-muted: #94a3b8; --accent: #6366f1; --accent-hover: #4f46e5; --shadow: rgba(0,0,0,0.4); }
+        .theme-gold-luxury { --bg: #0a0907; --card-bg: #161410; --text-main: #f3ece0; --text-muted: #a49e93; --accent: #d4af37; --accent-hover: #aa8c2c; --shadow: rgba(212,175,55,0.05); }
+
+        .custom-theme-bg { background-color: var(--bg); }
+        .custom-card { background-color: var(--card-bg); box-shadow: 0 10px 30px var(--shadow); }
+        .custom-text { color: var(--text-main); }
+        .custom-text-muted { color: var(--text-muted); }
+        .custom-btn-accent { background-color: var(--accent); color: #fff; }
+        .custom-btn-accent:hover { background-color: var(--accent-hover); }
+        .custom-border { border-color: var(--accent); }
+    /* End Styles Section Hero */
+    /* Start Style For munle mobile */
+    /* الثيم الفاتح - أسود / رمادي داكن */
+.theme-light, .theme-light-modern {
+    --bg-color: #ffffff;
+    --text-color: #0f172a; /* أسود/داكن جداً */
+    --border-color: #e2e8f0;
+}
+
+/* الثيم الداكن - أبيض */
+.theme-dark, .theme-dark-modern {
+    --bg-color: #0f172a;
+    --text-color: #ffffff; /* أبيض ناصع */
+    --border-color: #334155;
+}
+
+/* الثيم الذهبي الفاخر */
+.theme-gold-luxury {
+    --bg-color: #0b0f19;
+    --text-color: #f59e0b; /* ذهبي */
+    --border-color: #d97706;
+}
+
+/* تطبيق كلاس لون النص التفاعلي */
+.custom-text {
+    color: var(--text-color) !important;
+}
+
+.custom-border {
+    border-color: var(--border-color);
+}
+    /* END Style For munle mobile */
+    /* Start Style For munle mobile */

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="html-root">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon & Manifest -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicon_io/site.webmanifest">
+
+    <title data-i18n="page-title">(الرئيسية) م. أحمد السروري</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/brands.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- External Scripts -->
+    <script src="assets/js/header.js" defer></script>
+    <script src="assets/js/footer.js" defer></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 font-sans transition-colors duration-300">
+
+    <!-- Header Container -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section class="py-20 text-center px-4 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto">
+            <span
+                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 mb-6 border border-blue-100 dark:border-blue-800">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> خدمات احترافية متكاملة
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 text-gray-900 dark:text-white tracking-tight leading-tight"
+                data-lang-ar="خدماتنا التقنية المتكاملة" data-lang-en="Our Comprehensive Technical Services">
+                خدماتنا التقنية المتكاملة
+            </h1>
+            <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
+                data-lang-ar="نحول أفكارك الرائدة إلى واقع رقمي متميز – هندسة برمجية دقيقة، تصميم عصري، وحلول تسويقية ذكية تضمن نمو أعمالك وتفوقها."
+                data-lang-en="We turn your pioneering ideas into a distinct digital reality – precise software engineering, modern design, and smart marketing solutions.">
+                نحول أفكارك الرائدة إلى واقع رقمي متميز – هندسة برمجية دقيقة، تصميم عصري، وحلول تسويقية ذكية تضمن نمو
+                أعمالك وتفوقها.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <main class="max-w-7xl mx-auto px-4 pb-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Service 1: أدارة حسابات السوشيال ميديا -->
+            <div
+                class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div
+                        class="w-16 h-16 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white"
+                        data-lang-ar="إدارة حسابات السوشيال ميديا" data-lang-en="Social Media Accounts Management">
+                        إدارة حسابات السوشيال ميديا
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed"
+                        data-lang-ar="تحويل حساباتك إلى منصات حية تنبض بالاحترافية عبر استراتيجيات محتوى مدروسة وتصاميم تزيد التفاعل."
+                        data-lang-en="Transform your accounts into vibrant, professional platforms through tailored content strategies.">
+                        تحويل حساباتك إلى منصات حية تنبض بالاحترافية عبر استراتيجيات محتوى مدروسة وتصاميم تزيد التفاعل.
+                    </p>
+                    <ul class="text-sm text-gray-500 dark:text-gray-300 space-y-2.5 pr-4 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500 text-xs"></i>
+                            استراتيجية محتوى دورية وجذابة</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500 text-xs"></i>
+                            إدارة الردود والتفاعل الفوري مع العملاء</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500 text-xs"></i>
+                            تقارير أداء دورية لنمو الحسابات</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="openServiceModal('Social Media Management', 'إدارة حسابات السوشيال ميديا', 'نصنع لحساباتك حضوراً مؤثراً يجذب الأنظار ويبني ولاءً حقيقياً مع جمهورك. نقوم بوضع خطط محتوى دقيقة، نشر منتظم، وإدارة شاملة للتفاعل لتعزيز اسم علامتك التجارية.')"
+                    class="w-full py-3 px-4 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-semibold rounded-2xl hover:bg-blue-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2 group-hover:shadow-md">
+                    <span>اعرف المزيد</span> <i
+                        class="fa-solid fa-arrow-left text-xs transition-transform group-hover:-translate-x-1"></i>
+                </button>
+            </div>
+
+            <!-- Service 2: التسويق الإلكتروني الاحترافي -->
+            <div
+                class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div
+                        class="w-16 h-16 bg-amber-100 dark:bg-amber-900/50 text-amber-600 dark:text-amber-500 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white"
+                        data-lang-ar="التسويق الإلكتروني الاحترافي" data-lang-en="Professional Digital Marketing">
+                        التسويق الإلكتروني الاحترافي
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed"
+                        data-lang-ar="استراتيجيات تسويقية مخصصة لزيادة المبيعات والوصول لجمهورك المستهدف بدقة عبر الحملات الممولة."
+                        data-lang-en="Customized marketing strategies to boost sales and precisely reach your target audience.">
+                        استراتيجيات تسويقية مخصصة لزيادة المبيعات والوصول لجمهورك المستهدف بدقة عبر الحملات الممولة.
+                    </p>
+                    <ul class="text-sm text-gray-500 dark:text-gray-300 space-y-2.5 pr-4 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-xs"></i>
+                            إدارة الحملات الإعلانية الممولة (Google & Meta)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-xs"></i>
+                            تحليل سلوك الجمهور وقياس العائد ROI</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-xs"></i>
+                            مضاعفة معدلات التحويل والمبيعات</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="openServiceModal('Professional Digital Marketing', 'التسويق الإلكتروني الاحترافي', 'نساعدك على تحقيق أقصى عائد على الاستثمار من خلال حملات إعلانية موجهة بذكاء نحو جمهورك المستهدف، مع تحليل دقيق للنتائج لضمان نمو مستدام ومبيعات متصاعدة.')"
+                    class="w-full py-3 px-4 bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-500 font-semibold rounded-2xl hover:bg-amber-500 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2 group-hover:shadow-md">
+                    <span>اعرف المزيد</span> <i
+                        class="fa-solid fa-arrow-left text-xs transition-transform group-hover:-translate-x-1"></i>
+                </button>
+            </div>
+
+            <!-- Service 3: تصميم واجهات مواقع مرنة ومتجاوبة Front-End -->
+            <div
+                class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div
+                        class="w-16 h-16 bg-cyan-100 dark:bg-cyan-900/50 text-cyan-600 dark:text-cyan-400 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white"
+                        data-lang-ar="تصميم واجهات مواقع مرنة ومتجاوبة Front-End"
+                        data-lang-en="Responsive Front-End Web Design">
+                        تصميم واجهات مواقع مرنة ومتجاوبة Front-End
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed"
+                        data-lang-ar="نبني واجهات مستخدم جذابة وسريعة باستخدام أحدث تقنيات الويب وتصميم متوافق مع كافة الشاشات."
+                        data-lang-en="We build engaging and fast user interfaces using modern web technologies and responsive design.">
+                        نبني واجهات مستخدم جذابة وسريعة باستخدام أحدث تقنيات الويب وتصميم متوافق مع كافة الشاشات.
+                    </p>
+                    <ul class="text-sm text-gray-500 dark:text-gray-300 space-y-2.5 pr-4 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-500 text-xs"></i>
+                            تصميم تفاعلي باستخدام Tailwind CSS</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-500 text-xs"></i>
+                            توافق تام مع الهواتف والأجهزة الذكية</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-500 text-xs"></i>
+                            تجربة مستخدم UX سلسة وسريعة الأداء</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="openServiceModal('Front-End Web Design', 'تصميم واجهات مواقع مرنة ومتجاوبة Front-End', 'نقدم خدمات تصميم وبرمجة الواجهات الأمامية (Front-End) بأعلى معايير الجودة، مع التركيز على سرعة التحميل، سلاسة التنقل، والتجربة البصرية المبهرة للزوار.')"
+                    class="w-full py-3 px-4 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 font-semibold rounded-2xl hover:bg-cyan-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2 group-hover:shadow-md">
+                    <span>اعرف المزيد</span> <i
+                        class="fa-solid fa-arrow-left text-xs transition-transform group-hover:-translate-x-1"></i>
+                </button>
+            </div>
+
+            <!-- Service 4: تطوير وبناء الأنظمة الخلفية Back-End -->
+            <div
+                class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div
+                        class="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white"
+                        data-lang-ar="تطوير وبناء الأنظمة الخلفية Back-End" data-lang-en="Back-End Web Development">
+                        تطوير وبناء الأنظمة الخلفية Back-End
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed"
+                        data-lang-ar="هندسة الأنظمة الخلفية والسيرفرات القوية لضمان معالجة البيانات بسرعة وأمان تام."
+                        data-lang-en="Engineering robust back-end systems and servers to ensure secure and fast data processing.">
+                        هندسة الأنظمة الخلفية والسيرفرات القوية لضمان معالجة البيانات بسرعة وأمان تام.
+                    </p>
+                    <ul class="text-sm text-gray-500 dark:text-gray-300 space-y-2.5 pr-4 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-500 text-xs"></i>
+                            بناء واجهات برمجية APIs آمنة وقوية</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-500 text-xs"></i>
+                            استخدام إطار العمل Laravel 13 الموثوق</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-500 text-xs"></i>
+                            حماية متقدمة للبيانات ومنع الثغرات</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="openServiceModal('Back-End Development', 'تطوير وبناء الأنظمة الخلفية Back-End', 'نهندس العقل المدبر لموقعك الإلكتروني باستخدام أحدث تقنيات السيرفرات وقواعد البيانات. نضمن لك استقراراً تاماً، وسرعة استجابة عالية، وحماية متقدمة لبيانات عملائك.')"
+                    class="w-full py-3 px-4 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 font-semibold rounded-2xl hover:bg-indigo-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2 group-hover:shadow-md">
+                    <span>اعرف المزيد</span> <i
+                        class="fa-solid fa-arrow-left text-xs transition-transform group-hover:-translate-x-1"></i>
+                </button>
+            </div>
+
+            <!-- Service 5: تطوير منصات الويب المتكاملة Full-Stack -->
+            <div
+                class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div
+                        class="w-16 h-16 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white"
+                        data-lang-ar="تطوير منصات الويب المتكاملة Full-Stack"
+                        data-lang-en="Full-Stack Web Platforms Development">
+                        تطوير منصات الويب المتكاملة Full-Stack
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed"
+                        data-lang-ar="حلول برمجية شاملة تربط بين روعة الواجهات الأمامية وقوة الأنظمة الخلفية بكفاءة عالية."
+                        data-lang-en="Comprehensive software solutions bridging front-end elegance with back-end power.">
+                        حلول برمجية شاملة تربط بين روعة الواجهات الأمامية وقوة الأنظمة الخلفية بكفاءة عالية.
+                    </p>
+                    <ul class="text-sm text-gray-500 dark:text-gray-300 space-y-2.5 pr-4 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i>
+                            تطوير متكامل باستخدام Laravel 13 و Livewire</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i>
+                            دعم كامل للغة العربية (RTL) والوضع الداكن</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i>
+                            لوحة تحكم مرنة وشاملة لإدارة النظام</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="openServiceModal('Full-Stack Development', 'تطوير منصات الويب المتكاملة Full-Stack', 'نحن ندمج الإبداع البصري مع الهندسة البرمجية المتينة لنبني لك منصة إلكترونية شاملة ومتطورة تلبي كافة احتياجات عملك بدقة، مع أداء فائق وتجربة مستخدم لا تُنسى.')"
+                    class="w-full py-3 px-4 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 font-semibold rounded-2xl hover:bg-emerald-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2 group-hover:shadow-md">
+                    <span>اعرف المزيد</span> <i
+                        class="fa-solid fa-arrow-left text-xs transition-transform group-hover:-translate-x-1"></i>
+                </button>
+            </div>
+
+            <!-- Service 6: تطوير وبناء قواعد البيانات -->
+            <div
+                class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div
+                        class="w-16 h-16 bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-400 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white"
+                        data-lang-ar="تطوير وبناء قواعد البيانات" data-lang-en="Database Design & Development">
+                        تطوير وبناء قواعد البيانات
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed"
+                        data-lang-ar="تصميم وهندسة قواعد بيانات مرنة، منظمة، وآمنة لتحمل ضغط البيانات الهائل وتسهيل الاستعلامات."
+                        data-lang-en="Designing flexible, organized, and secure databases to handle massive data loads efficiently.">
+                        تصميم وهندسة قواعد بيانات مرنة، منظمة، وآمنة لتحمل ضغط البيانات الهائل وتسهيل الاستعلامات.
+                    </p>
+                    <ul class="text-sm text-gray-500 dark:text-gray-300 space-y-2.5 pr-4 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-500 text-xs"></i>
+                            هندسة ونمذجة البيانات باستخدام MySQL</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-500 text-xs"></i>
+                            تحسين سرعة الاستعلامات (Query Optimization)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-500 text-xs"></i>
+                            إدارة النسخ الاحتياطي وحماية البيانات</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="openServiceModal('Database Development', 'تطوير وبناء قواعد البيانات', 'نصمم هياكل قواعد بيانات متكاملة ومحسنة بعناية لضمان سرعة فائقة في استرجاع وتخزين البيانات، مع الحفاظ على أعلى معايير أمان وتكامل البيانات.')"
+                    class="w-full py-3 px-4 bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 font-semibold rounded-2xl hover:bg-purple-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2 group-hover:shadow-md">
+                    <span>اعرف المزيد</span> <i
+                        class="fa-solid fa-arrow-left text-xs transition-transform group-hover:-translate-x-1"></i>
+                </button>
+            </div>
+
+            <!-- Service 7: تجارة إلكترونية ونظام ERP متكامل -->
+            <div
+                class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div
+                        class="w-16 h-16 bg-orange-100 dark:bg-orange-900/50 text-orange-600 dark:text-orange-400 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white"
+                        data-lang-ar="تجارة إلكترونية ونظام ERP متكامل"
+                        data-lang-en="E-Commerce & ERP Complete Solutions">
+                        تجارة إلكترونية ونظام ERP متكامل
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed"
+                        data-lang-ar="بناء متاجر إلكترونية شاملة وأنظمة تخطيط موارد المؤسسات لإدارة المبيعات، المخازن، والحسابات."
+                        data-lang-en="Building comprehensive e-commerce stores and ERP systems for sales, inventory, and accounts.">
+                        بناء متاجر إلكترونية شاملة وأنظمة تخطيط موارد المؤسسات لإدارة المبيعات، المخازن، والحسابات.
+                    </p>
+                    <ul class="text-sm text-gray-500 dark:text-gray-300 space-y-2.5 pr-4 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-500 text-xs"></i>
+                            متاجر إلكترونية متكاملة مع بوابات الدفع</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-500 text-xs"></i>
+                            أتمتة إدارة المخازن وحسابات العملاء</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-500 text-xs"></i>
+                            تقارير مالية وإدارية دقيقة لنمو النشاط</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="openServiceModal('E-Commerce & ERP', 'تجارة إلكترونية ونظام ERP متكامل', 'نمكنك من إدارة أعمالك التجارية باحترافية تامة عبر متاجر إلكترونية وأنظمة ERP متقدمة تدير المخازن، المبيعات، والحسابات بسلاسة تامة وتساهم في مضاعفة أرباحك.')"
+                    class="w-full py-3 px-4 bg-orange-50 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 font-semibold rounded-2xl hover:bg-orange-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2 group-hover:shadow-md">
+                    <span>اعرف المزيد</span> <i
+                        class="fa-solid fa-arrow-left text-xs transition-transform group-hover:-translate-x-1"></i>
+                </button>
+            </div>
+
+            <!-- Service 8: تطبيقات الجوال -->
+            <div
+                class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div
+                        class="w-16 h-16 bg-red-100 dark:bg-red-900/50 text-red-600 dark:text-red-400 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white" data-lang-ar="تطبيقات الجوال"
+                        data-lang-en="Mobile Applications">
+                        تطبيقات الجوال
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed"
+                        data-lang-ar="تطبيقات Android و iOS عالية الأداء لربط شركتك بعملائك في أي وقت وفي كل مكان."
+                        data-lang-en="High-performance Android and iOS applications to connect your business with customers anytime.">
+                        تطبيقات Android و iOS عالية الأداء لربط شركتك بعملائك في أي وقت وفي كل مكان.
+                    </p>
+                    <ul class="text-sm text-gray-500 dark:text-gray-300 space-y-2.5 pr-4 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-500 text-xs"></i>
+                            تطبيقات ذكية لأنظمة Android و iOS</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-500 text-xs"></i>
+                            واجهات مستخدم تفاعلية وسريعة الاستجابة</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-500 text-xs"></i> أداء
+                            مستقر وتجربة مستخدم فريدة</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="openServiceModal('Mobile Applications', 'تطبيقات الجوال', 'نصمم ونطور تطبيقات جوال احترافية لأنظمة أندرويد و آي أو إس، تمنح عملائك تجربة استخدام مذهلة وسهلة الوصول لخدماتك ومنتجاتك على مدار الساعة.')"
+                    class="w-full py-3 px-4 bg-red-50 dark:bg-red-900/30 text-red-600 dark:text-red-400 font-semibold rounded-2xl hover:bg-red-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2 group-hover:shadow-md">
+                    <span>اعرف المزيد</span> <i
+                        class="fa-solid fa-arrow-left text-xs transition-transform group-hover:-translate-x-1"></i>
+                </button>
+            </div>
+
+            <!-- Service 9: تحسين محركات البحث SEO -->
+            <div
+                class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div
+                        class="w-16 h-16 bg-teal-100 dark:bg-teal-900/50 text-teal-600 dark:text-teal-400 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white"
+                        data-lang-ar="تحسين محركات البحث SEO" data-lang-en="SEO Optimization">
+                        تحسين محركات البحث SEO
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed"
+                        data-lang-ar="تصدر نتائج بحث Google وجذب عملاء مستهدفين عبر تحسين تقني ومحتوى إبداعي متوافق."
+                        data-lang-en="Rank top on Google search results and attract targeted customers through technical optimization.">
+                        تصدر نتائج بحث Google وجذب عملاء مستهدفين عبر تحسين تقني ومحتوى إبداعي متوافق.
+                    </p>
+                    <ul class="text-sm text-gray-500 dark:text-gray-300 space-y-2.5 pr-4 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-500 text-xs"></i> تصدر
+                            نتائج البحث الأولى في جوجل</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-500 text-xs"></i>
+                            تحسين السرعة والأداء التقني للموقع</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-500 text-xs"></i> جذب
+                            زيارات مجانية ومستهدفة باستمرار</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="openServiceModal('SEO Optimization', 'تحسين محركات البحث SEO', 'نجعل موقعك يظهر في صدارة نتائج محرك البحث جوجل، مما يسهل على العملاء المهتمين الوصول إليك مباشرة وزيادة المبيعات والزيارات دون الحاجة لإعلانات مستمرة.')"
+                    class="w-full py-3 px-4 bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 font-semibold rounded-2xl hover:bg-teal-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2 group-hover:shadow-md">
+                    <span>اعرف المزيد</span> <i
+                        class="fa-solid fa-arrow-left text-xs transition-transform group-hover:-translate-x-1"></i>
+                </button>
+            </div>
+
+            <!-- Service 10: هندسة البرمجيات وتطوير الأنظمة -->
+            <div
+                class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div
+                        class="w-16 h-16 bg-rose-100 dark:bg-rose-900/50 text-rose-600 dark:text-rose-500 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white"
+                        data-lang-ar="هندسة البرمجيات وتطوير الأنظمة" data-lang-en="Software Engineering & Systems">
+                        هندسة البرمجيات وتطوير الأنظمة
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed"
+                        data-lang-ar="بناء أنظمة برمجية بمعايير هندسية عالمية لضمان الاستقرار، الأمان، والاستدامة طويلة الأمد."
+                        data-lang-en="Building software systems with global engineering standards to ensure stability and long-term security.">
+                        بناء أنظمة برمجية بمعايير هندسية عالمية لضمان الاستقرار، الأمان، والاستدامة طويلة الأمد.
+                    </p>
+                    <ul class="text-sm text-gray-500 dark:text-gray-300 space-y-2.5 pr-4 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rose-500 text-xs"></i>
+                            هيكلة برمجية متطورة بنمط MVC و SOLID</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rose-500 text-xs"></i>
+                            حماية متقدمة ضد الهجمات والثغرات</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rose-500 text-xs"></i>
+                            استقرار تام وأداء عالي الاستدامة</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="openServiceModal('Software Engineering', 'هندسة البرمجيات وتطوير الأنظمة', 'نطبق أحدث معايير هندسة البرمجيات (مثل مبادئ SOLID وأنماط التصميم الهيكلي) لنبني لك أنظمة برمجية قوية، آمنة، وقابلة للتوسع المستقبلي بكل مرونة.')"
+                    class="w-full py-3 px-4 bg-rose-50 dark:bg-rose-900/30 text-rose-600 dark:text-rose-500 font-semibold rounded-2xl hover:bg-rose-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2 group-hover:shadow-md">
+                    <span>اعرف المزيد</span> <i
+                        class="fa-solid fa-arrow-left text-xs transition-transform group-hover:-translate-x-1"></i>
+                </button>
+            </div>
+
+            <!-- Service 11: تطوير برامج سطح المكتب وأنظمة الحاسوب -->
+            <div
+                class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div
+                        class="w-16 h-16 bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white"
+                        data-lang-ar="تطوير برامج سطح المكتب وأنظمة الحاسوب"
+                        data-lang-en="Desktop Application Development">
+                        تطوير برامج سطح المكتب وأنظمة الحاسوب
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed"
+                        data-lang-ar="بناء برامج وتطبيقات مكتبية متكاملة وقوية باستخدام C#, Java, C++, وقواعد بيانات Oracle."
+                        data-lang-en="Building powerful desktop applications and software using C#, Java, C++, and Oracle databases.">
+                        بناء برامج وتطبيقات مكتبية متكاملة وقوية باستخدام C#, Java, C++, وقواعد بيانات Oracle.
+                    </p>
+                    <ul class="text-sm text-gray-500 dark:text-gray-300 space-y-2.5 pr-4 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-500 text-xs"></i>
+                            تطبيقات مكتبية مخصصة للشركات والأنظمة</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-500 text-xs"></i> ربط
+                            قوي مع قواعد بيانات Oracle و SQL</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-500 text-xs"></i> أداء
+                            عالي وثبات على أنظمة التشغيل المختلفة</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="openServiceModal('Desktop Applications', 'تطوير برامج سطح المكتب وأنظمة الحاسوب', 'نطور برامج سطح مكتب احترافية وعالية الأداء باستخدام أقوى اللغات التقنية مثل C# و Java و C++ مع ربط متين بقواعد بيانات Oracle للشركات والمؤسسات الكبرى.')"
+                    class="w-full py-3 px-4 bg-sky-50 dark:bg-sky-900/30 text-sky-600 dark:text-sky-400 font-semibold rounded-2xl hover:bg-sky-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2 group-hover:shadow-md">
+                    <span>اعرف المزيد</span> <i
+                        class="fa-solid fa-arrow-left text-xs transition-transform group-hover:-translate-x-1"></i>
+                </button>
+            </div>
+
+            <!-- Service 12: بناء الهوية الرقمية والشعار الفاخر -->
+            <div
+                class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div
+                        class="w-16 h-16 bg-pink-100 dark:bg-pink-900/50 text-pink-600 dark:text-pink-400 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white"
+                        data-lang-ar="بناء الهوية الرقمية والشعار الفاخر"
+                        data-lang-en="Digital Identity & Luxury Logo Design">
+                        بناء الهوية الرقمية والشعار الفاخر
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed"
+                        data-lang-ar="ابتكار هوية رقمية فريدة وتصميم شعار فاخر (Logo) يعكس رقي وموثوقية علامتك التجارية."
+                        data-lang-en="Creating a unique digital identity and luxury logo that reflects your brand's prestige.">
+                        ابتكار هوية رقمية فريدة وتصميم شعار فاخر (Logo) يعكس رقي وموثوقية علامتك التجارية.
+                    </p>
+                    <ul class="text-sm text-gray-500 dark:text-gray-300 space-y-2.5 pr-4 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 text-xs"></i>
+                            تصميم شعارات فاخرة مبتكرة (Monogram)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 text-xs"></i> دليل
+                            هوية متكامل (Brand Guidelines)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500 text-xs"></i>
+                            تناسق بصري يعزز مكانة علامتك</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="openServiceModal('Digital Identity & Logo', 'بناء الهوية الرقمية والشعار الفاخر', 'نبتكر لك هوية رقمية فريدة وشعاراً فاخراً يعبر بدقة عن قيم شركتك ويترك انطباعاً لا يُمحى في أذهان عملائك، بدءاً من الشعار وحتى دليل الهوية الكامل.')"
+                    class="w-full py-3 px-4 bg-pink-50 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400 font-semibold rounded-2xl hover:bg-pink-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2 group-hover:shadow-md">
+                    <span>اعرف المزيد</span> <i
+                        class="fa-solid fa-arrow-left text-xs transition-transform group-hover:-translate-x-1"></i>
+                </button>
+            </div>
+
+            <!-- Service 13: تصميم الجرافكس والأيقونات المميزة -->
+            <div
+                class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div
+                        class="w-16 h-16 bg-violet-100 dark:bg-violet-900/50 text-violet-600 dark:text-violet-400 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                        <i class="fa-solid fa-paintbrush"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white"
+                        data-lang-ar="تصميم الجرافكس والأيقونات المميزة" data-lang-en="Graphics & Custom Icons Design">
+                        تصميم الجرافكس والأيقونات المميزة
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed"
+                        data-lang-ar="تصاميم جرافيكية إبداعية ومطبوعات وأيقونات مخصصة تضفي جمالاً واحترافية على مشروعك."
+                        data-lang-en="Creative graphic designs, prints, and custom icons that add beauty and professionalism to your project.">
+                        تصاميم جرافيكية إبداعية ومطبوعات وأيقونات مخصصة تضفي جمالاً واحترافية على مشروعك.
+                    </p>
+                    <ul class="text-sm text-gray-500 dark:text-gray-300 space-y-2.5 pr-4 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-violet-500 text-xs"></i>
+                            تصميم مطبوعات وبانرات إعلانية</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-violet-500 text-xs"></i>
+                            تصميم أيقونات ورسوم توضيحية مخصصة</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-violet-500 text-xs"></i>
+                            تصاميم سوشيال ميديا إبداعية VIP</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="openServiceModal('Graphics & Icons Design', 'تصميم الجرافكس والأيقونات المميزة', 'نقدم تصاميم جرافيكية مبتكرة وأيقونات مخصصة تلبي كافة احتياجاتك التسويقية والرقمية بأعلى جودة بصرية تبرز جمال مشروعك.')"
+                    class="w-full py-3 px-4 bg-violet-50 dark:bg-violet-900/30 text-violet-600 dark:text-violet-400 font-semibold rounded-2xl hover:bg-violet-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2 group-hover:shadow-md">
+                    <span>اعرف المزيد</span> <i
+                        class="fa-solid fa-arrow-left text-xs transition-transform group-hover:-translate-x-1"></i>
+                </button>
+            </div>
+
+            <!-- Service 14: تخفيضات خاصة للمشاريع الناشئة والكاملة -->
+            <div
+                class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div
+                        class="w-16 h-16 bg-yellow-100 dark:bg-yellow-900/50 text-yellow-600 dark:text-yellow-500 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white"
+                        data-lang-ar="تخفيضات خاصة للمشاريع الناشئة والكاملة"
+                        data-lang-en="Special Discounts for Startups & Full Projects">
+                        تخفيضات خاصة للمشاريع الناشئة والكاملة
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed"
+                        data-lang-ar="نقدم عروضاً وباقات سعرية تنافسية وتخفيضات خاصة لدعم أصحاب المشاريع الناشئة والطلبات المتكاملة."
+                        data-lang-en="We offer competitive pricing packages and special discounts to support startups and full projects.">
+                        نقدم عروضاً وباقات سعرية تنافسية وتخفيضات خاصة لدعم أصحاب المشاريع الناشئة والطلبات المتكاملة.
+                    </p>
+                    <ul class="text-sm text-gray-500 dark:text-gray-300 space-y-2.5 pr-4 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i>
+                            باقات سعرية خاصة للمشاريع الناشئة</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i>
+                            خصومات مميزة عند طلب مشروع متكامل (Full-Stack)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i>
+                            تسهيلات في الدعم والصيانة</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="openServiceModal('Startups Discounts', 'تخفيضات خاصة للمشاريع الناشئة والكاملة', 'نؤمن بأهمية دعم رواد الأعمال والمشاريع الناشئة؛ لذلك نقدم باقات أسعار مخفضة وخصومات استثنائية عند طلب تنفيذ مشروعك التقني أو الرقمي المتكامل معنا.')"
+                    class="w-full py-3 px-4 bg-yellow-50 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-500 font-semibold rounded-2xl hover:bg-yellow-500 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2 group-hover:shadow-md">
+                    <span>اعرف المزيد</span> <i
+                        class="fa-solid fa-arrow-left text-xs transition-transform group-hover:-translate-x-1"></i>
+                </button>
+            </div>
+
+            <!-- Service 15: فريق احترافي متكامل لخدمتك -->
+            <div
+                class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div
+                        class="w-16 h-16 bg-teal-100 dark:bg-teal-900/50 text-teal-600 dark:text-teal-400 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                        <i class="fa-solid fa-users-gear"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white"
+                        data-lang-ar="فريق احترافي متكامل لخدمتك" data-lang-en="Dedicated Professional Team">
+                        فريق احترافي متكامل لخدمتك
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed"
+                        data-lang-ar="فريق عمل متكامل من الخبراء في التصميم الفاخر والتطوير لإنجاز كافة أعمالك بأعلى كفاءة وسرعة."
+                        data-lang-en="A dedicated team of experts in luxury design and development to execute all your projects efficiently.">
+                        فريق عمل متكامل من الخبراء في التصميم الفاخر والتطوير لإنجاز كافة أعمالك بأعلى كفاءة وسرعة.
+                    </p>
+                    <ul class="text-sm text-gray-500 dark:text-gray-300 space-y-2.5 pr-4 mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-500 text-xs"></i>
+                            خبراء في التصميم الفاخر والبرمجة</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-500 text-xs"></i>
+                            إنجاز المشاريع الكبرى باحترافية وتوزيع مهام دقيق</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-500 text-xs"></i>
+                            إشراف مباشر ومتابعة مستمرة لضمان الجودة</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="openServiceModal('Professional Team', 'فريق احترافي متكامل لخدمتك', 'نعمل من خلال فريق متكامل ومحترف يضم خبراء في البرمجة والتصميم الفاخر، لضمان تنفيذ أعمالك ومشاريعك الكبرى بأعلى معايير الجودة والاحترافية وفي الأوقات المحددة.')"
+                    class="w-full py-3 px-4 bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 font-semibold rounded-2xl hover:bg-teal-600 hover:text-white transition-colors duration-300 text-center flex items-center justify-center gap-2 group-hover:shadow-md">
+                    <span>اعرف المزيد</span> <i
+                        class="fa-solid fa-arrow-left text-xs transition-transform group-hover:-translate-x-1"></i>
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Service Details Modal (Popup) -->
+    <div id="serviceModal"
+        class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white dark:bg-gray-900 w-full max-w-lg rounded-3xl p-6 md:p-8 shadow-2xl border border-gray-100 dark:border-gray-800 transform scale-95 transition-transform duration-300"
+            id="modalContent">
+            <div class="flex items-center justify-between mb-6">
+                <h3 id="modalTitle" class="text-2xl font-bold text-gray-900 dark:text-white"></h3>
+                <button onclick="closeServiceModal()"
+                    class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 flex items-center justify-center hover:bg-red-100 hover:text-red-500 transition-colors">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <p id="modalDescription" class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg mb-8"></p>
+            <div class="flex justify-end">
+                <button onclick="closeServiceModal()"
+                    class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors shadow-lg shadow-blue-600/30"
+                    data-lang-ar="إغلاق" data-lang-en="Close">
+                    إغلاق
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- JavaScript for Interactivity -->
+    <script src="assets/js/opreting.js"></script>
+</body>
+
+</html>
